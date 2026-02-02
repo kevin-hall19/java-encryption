@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%-5level %logger{36} - %msg%n" />
+        </Console>
+
+        <Console name="ConsolePrinter" target="SYSTEM_OUT">
+            <PatternLayout pattern="$msg%n"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="ERROR">
+            <AppenderRef ref="Console"/>
+        </Root>
+        <Logger name="com.kevikev.encryption.util.ConsoleUtils" level="debug" additivity="false">
+            <AppenderRef ref="ConsolePrinter"/>
+        </Logger>
+    </Loggers>
+</Configuration>
